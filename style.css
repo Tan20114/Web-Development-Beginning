@@ -1,0 +1,120 @@
+@font-face {
+    font-family: "Work-Sans";
+    src: url(./assets/fonts/static/WorkSans-Regular.ttf) format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+@font-face {
+    font-family: "Work-Sans";
+    src: url(./assets/fonts/static/WorkSans-Bold.ttf) format('truetype');
+    font-style: normal;
+    font-weight: bold;
+}
+body
+{
+    display: flex;
+    flex-direction: column;
+    
+    justify-content: center;
+    align-items: center;
+
+    background-color: hsl(275, 100%, 97%);
+    background-image: url('./assets/images/background-pattern-desktop.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    
+    font-family: "Work-Sans";
+    font-size: 11px;
+}
+.container
+{
+    width: 40%;
+    max-width: 40%;
+    background-color: white;
+    border-radius: 25px;
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+    margin: 12%;
+    padding: 20px;
+}
+.container .head
+{
+    display: flex;
+    padding-left: 10px;
+    justify-content: start;
+}
+.container .head img
+{
+    width: 5%;
+    padding-right: 20px;
+}
+.accordion-topic
+{
+    font-weight: bold;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.accordion-topic img
+{
+    width: 1.5rem;
+}
+.accordion-topic:hover p
+{
+    color: blueviolet;
+    scale:  1.02;
+    transition: 500ms ease;
+}
+.accordion-des {
+    max-height: 0;
+    padding-left: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease, padding-left 0.5s ease;
+}
+
+.attributes
+{
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .container {
+        width: 80%;
+    }
+
+    .accordion-topic p {
+        font-size: 14px;
+    }
+
+    .accordion-des {
+        font-size: 14px;
+    }
+
+    .head img {
+        width: 30px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        width: 90%;
+    }
+
+    .accordion-topic p {
+        font-size: 12px;
+    }
+
+    .accordion-des {
+        font-size: 12px;
+    }
+
+    .head img {
+        width: 25px;
+    }
+}
